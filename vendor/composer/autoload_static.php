@@ -73,6 +73,7 @@ class ComposerStaticInitf262bce03e0f5fa396150f88574bbc17
             'Symfony\\Component\\OptionsResolver\\' => 34,
             'Symfony\\Component\\Notifier\\' => 27,
             'Symfony\\Component\\Mime\\' => 23,
+            'Symfony\\Component\\Mailer\\Bridge\\Sendgrid\\' => 41,
             'Symfony\\Component\\Mailer\\' => 25,
             'Symfony\\Component\\Intl\\' => 23,
             'Symfony\\Component\\HttpKernel\\' => 29,
@@ -105,6 +106,7 @@ class ComposerStaticInitf262bce03e0f5fa396150f88574bbc17
             'Symfony\\Bridge\\PhpUnit\\' => 23,
             'Symfony\\Bridge\\Monolog\\' => 23,
             'Symfony\\Bridge\\Doctrine\\' => 24,
+            'SymfonyCasts\\Bundle\\VerifyEmail\\' => 32,
             'Sensio\\Bundle\\FrameworkExtraBundle\\' => 35,
         ),
         'P' => 
@@ -305,6 +307,10 @@ class ComposerStaticInitf262bce03e0f5fa396150f88574bbc17
         array (
             0 => __DIR__ . '/..' . '/symfony/mime',
         ),
+        'Symfony\\Component\\Mailer\\Bridge\\Sendgrid\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/sendgrid-mailer',
+        ),
         'Symfony\\Component\\Mailer\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/mailer',
@@ -433,6 +439,10 @@ class ComposerStaticInitf262bce03e0f5fa396150f88574bbc17
         array (
             0 => __DIR__ . '/..' . '/symfony/doctrine-bridge',
         ),
+        'SymfonyCasts\\Bundle\\VerifyEmail\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfonycasts/verify-email-bundle/src',
+        ),
         'Sensio\\Bundle\\FrameworkExtraBundle\\' => 
         array (
             0 => __DIR__ . '/..' . '/sensio/framework-extra-bundle/src',
@@ -556,7 +566,20 @@ class ComposerStaticInitf262bce03e0f5fa396150f88574bbc17
     );
 
     public static $classMap = array (
+        'App\\Controller\\ContactController' => __DIR__ . '/../..' . '/src/Controller/ContactController.php',
+        'App\\Controller\\HomeController' => __DIR__ . '/../..' . '/src/Controller/HomeController.php',
+        'App\\Controller\\LoginController' => __DIR__ . '/../..' . '/src/Controller/LoginController.php',
+        'App\\Controller\\MusicController' => __DIR__ . '/../..' . '/src/Controller/MusicController.php',
+        'App\\Controller\\PresentationController' => __DIR__ . '/../..' . '/src/Controller/PresentationController.php',
+        'App\\Controller\\RegistrationController' => __DIR__ . '/../..' . '/src/Controller/RegistrationController.php',
+        'App\\Controller\\SecurityController' => __DIR__ . '/../..' . '/src/Controller/SecurityController.php',
+        'App\\Controller\\VideoController' => __DIR__ . '/../..' . '/src/Controller/VideoController.php',
+        'App\\Entity\\User' => __DIR__ . '/../..' . '/src/Entity/User.php',
+        'App\\Form\\RegistrationFormType' => __DIR__ . '/../..' . '/src/Form/RegistrationFormType.php',
         'App\\Kernel' => __DIR__ . '/../..' . '/src/Kernel.php',
+        'App\\Repository\\UserRepository' => __DIR__ . '/../..' . '/src/Repository/UserRepository.php',
+        'App\\Security\\EmailVerifier' => __DIR__ . '/../..' . '/src/Security/EmailVerifier.php',
+        'App\\Security\\LoginFormAuthenticator' => __DIR__ . '/../..' . '/src/Security/LoginFormAuthenticator.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
         'Collator' => __DIR__ . '/..' . '/symfony/intl/Resources/stubs/Collator.php',
         'Doctrine\\Bundle\\DoctrineBundle\\Command\\CreateDatabaseDoctrineCommand' => __DIR__ . '/..' . '/doctrine/doctrine-bundle/Command/CreateDatabaseDoctrineCommand.php',
@@ -2236,6 +2259,18 @@ class ComposerStaticInitf262bce03e0f5fa396150f88574bbc17
         'Sensio\\Bundle\\FrameworkExtraBundle\\SensioFrameworkExtraBundle' => __DIR__ . '/..' . '/sensio/framework-extra-bundle/src/SensioFrameworkExtraBundle.php',
         'Sensio\\Bundle\\FrameworkExtraBundle\\Templating\\TemplateGuesser' => __DIR__ . '/..' . '/sensio/framework-extra-bundle/src/Templating/TemplateGuesser.php',
         'Stringable' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Stringable.php',
+        'SymfonyCasts\\Bundle\\VerifyEmail\\DependencyInjection\\Configuration' => __DIR__ . '/..' . '/symfonycasts/verify-email-bundle/src/DependencyInjection/Configuration.php',
+        'SymfonyCasts\\Bundle\\VerifyEmail\\DependencyInjection\\SymfonyCastsVerifyEmailExtension' => __DIR__ . '/..' . '/symfonycasts/verify-email-bundle/src/DependencyInjection/SymfonyCastsVerifyEmailExtension.php',
+        'SymfonyCasts\\Bundle\\VerifyEmail\\Exception\\ExpiredSignatureException' => __DIR__ . '/..' . '/symfonycasts/verify-email-bundle/src/Exception/ExpiredSignatureException.php',
+        'SymfonyCasts\\Bundle\\VerifyEmail\\Exception\\InvalidSignatureException' => __DIR__ . '/..' . '/symfonycasts/verify-email-bundle/src/Exception/InvalidSignatureException.php',
+        'SymfonyCasts\\Bundle\\VerifyEmail\\Exception\\VerifyEmailExceptionInterface' => __DIR__ . '/..' . '/symfonycasts/verify-email-bundle/src/Exception/VerifyEmailExceptionInterface.php',
+        'SymfonyCasts\\Bundle\\VerifyEmail\\Exception\\WrongEmailVerifyException' => __DIR__ . '/..' . '/symfonycasts/verify-email-bundle/src/Exception/WrongEmailVerifyException.php',
+        'SymfonyCasts\\Bundle\\VerifyEmail\\Generator\\VerifyEmailTokenGenerator' => __DIR__ . '/..' . '/symfonycasts/verify-email-bundle/src/Generator/VerifyEmailTokenGenerator.php',
+        'SymfonyCasts\\Bundle\\VerifyEmail\\Model\\VerifyEmailSignatureComponents' => __DIR__ . '/..' . '/symfonycasts/verify-email-bundle/src/Model/VerifyEmailSignatureComponents.php',
+        'SymfonyCasts\\Bundle\\VerifyEmail\\SymfonyCastsVerifyEmailBundle' => __DIR__ . '/..' . '/symfonycasts/verify-email-bundle/src/SymfonyCastsVerifyEmailBundle.php',
+        'SymfonyCasts\\Bundle\\VerifyEmail\\Util\\VerifyEmailQueryUtility' => __DIR__ . '/..' . '/symfonycasts/verify-email-bundle/src/Util/VerifyEmailQueryUtility.php',
+        'SymfonyCasts\\Bundle\\VerifyEmail\\VerifyEmailHelper' => __DIR__ . '/..' . '/symfonycasts/verify-email-bundle/src/VerifyEmailHelper.php',
+        'SymfonyCasts\\Bundle\\VerifyEmail\\VerifyEmailHelperInterface' => __DIR__ . '/..' . '/symfonycasts/verify-email-bundle/src/VerifyEmailHelperInterface.php',
         'Symfony\\Bridge\\Doctrine\\CacheWarmer\\ProxyCacheWarmer' => __DIR__ . '/..' . '/symfony/doctrine-bridge/CacheWarmer/ProxyCacheWarmer.php',
         'Symfony\\Bridge\\Doctrine\\ContainerAwareEventManager' => __DIR__ . '/..' . '/symfony/doctrine-bridge/ContainerAwareEventManager.php',
         'Symfony\\Bridge\\Doctrine\\DataCollector\\DoctrineDataCollector' => __DIR__ . '/..' . '/symfony/doctrine-bridge/DataCollector/DoctrineDataCollector.php',
@@ -3743,6 +3778,9 @@ class ComposerStaticInitf262bce03e0f5fa396150f88574bbc17
         'Symfony\\Component\\Intl\\Util\\IcuVersion' => __DIR__ . '/..' . '/symfony/intl/Util/IcuVersion.php',
         'Symfony\\Component\\Intl\\Util\\IntlTestHelper' => __DIR__ . '/..' . '/symfony/intl/Util/IntlTestHelper.php',
         'Symfony\\Component\\Intl\\Util\\Version' => __DIR__ . '/..' . '/symfony/intl/Util/Version.php',
+        'Symfony\\Component\\Mailer\\Bridge\\Sendgrid\\Transport\\SendgridApiTransport' => __DIR__ . '/..' . '/symfony/sendgrid-mailer/Transport/SendgridApiTransport.php',
+        'Symfony\\Component\\Mailer\\Bridge\\Sendgrid\\Transport\\SendgridSmtpTransport' => __DIR__ . '/..' . '/symfony/sendgrid-mailer/Transport/SendgridSmtpTransport.php',
+        'Symfony\\Component\\Mailer\\Bridge\\Sendgrid\\Transport\\SendgridTransportFactory' => __DIR__ . '/..' . '/symfony/sendgrid-mailer/Transport/SendgridTransportFactory.php',
         'Symfony\\Component\\Mailer\\DataCollector\\MessageDataCollector' => __DIR__ . '/..' . '/symfony/mailer/DataCollector/MessageDataCollector.php',
         'Symfony\\Component\\Mailer\\DelayedEnvelope' => __DIR__ . '/..' . '/symfony/mailer/DelayedEnvelope.php',
         'Symfony\\Component\\Mailer\\Envelope' => __DIR__ . '/..' . '/symfony/mailer/Envelope.php',
