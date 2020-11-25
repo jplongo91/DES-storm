@@ -2,18 +2,34 @@
 
 namespace App\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use App\Form\AdminProduitType;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
+use Doctrine\ORM\EntityManagerInterface;
 
 class AdminContentsController extends AbstractController
 {
     /**
      * @Route("/admin/contents/create", name="admin_contents_create")
      */
-    public function create(): Response
+    public function create(Request $request, EntityManagerInterface $entityManager): Response
     {
         $form = $this->createForm(AdminProduitType::class);
+
+
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+
+            $produit = $form->getData();
+            $entityManager->persist($produit);
+            $entityManager->flush();
+
+            return $this->redirectToRoute('admin_contents');
+        }
+
+
 
         return $this->render('admin_contents/create.html.twig', [
             'controller_name' => 'AdminContentsController',
