@@ -66,17 +66,21 @@ class __TwigTemplate_fdd16a15986ddd41ed11df6b9f0ad29d4bb2eeaec3d93f1f950783ddae7
         // line 13
         echo twig_include($this->env, $context, "navbar.html.twig");
         echo "
+
+        <div class=\"container\"> 
         ";
-        // line 14
+        // line 16
         $this->displayBlock('body', $context, $blocks);
-        // line 15
-        echo "        <script src=\"https://code.jquery.com/jquery-3.5.1.slim.min.js\" integrity=\"sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj\" crossorigin=\"anonymous\"></script>
+        // line 17
+        echo "        </div>
+
+        <script src=\"https://code.jquery.com/jquery-3.5.1.slim.min.js\" integrity=\"sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj\" crossorigin=\"anonymous\"></script>
         <script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js\" integrity=\"sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN\" crossorigin=\"anonymous\"></script>
         <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js\" integrity=\"sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s\" crossorigin=\"anonymous\"></script>
         ";
-        // line 18
+        // line 22
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 19
+        // line 23
         echo "    </body>
 </html>
 ";
@@ -125,7 +129,7 @@ class __TwigTemplate_fdd16a15986ddd41ed11df6b9f0ad29d4bb2eeaec3d93f1f950783ddae7
 
     }
 
-    // line 14
+    // line 16
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -143,7 +147,7 @@ class __TwigTemplate_fdd16a15986ddd41ed11df6b9f0ad29d4bb2eeaec3d93f1f950783ddae7
 
     }
 
-    // line 18
+    // line 22
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -173,7 +177,7 @@ class __TwigTemplate_fdd16a15986ddd41ed11df6b9f0ad29d4bb2eeaec3d93f1f950783ddae7
 
     public function getDebugInfo()
     {
-        return array (  147 => 18,  129 => 14,  111 => 9,  92 => 5,  80 => 19,  78 => 18,  73 => 15,  71 => 14,  67 => 13,  62 => 10,  60 => 9,  53 => 5,  47 => 1,);
+        return array (  151 => 22,  133 => 16,  115 => 9,  96 => 5,  84 => 23,  82 => 22,  75 => 17,  73 => 16,  67 => 13,  62 => 10,  60 => 9,  53 => 5,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -191,7 +195,11 @@ class __TwigTemplate_fdd16a15986ddd41ed11df6b9f0ad29d4bb2eeaec3d93f1f950783ddae7
     <body>
 
         {{ include('navbar.html.twig') }}
+
+        <div class=\"container\"> 
         {% block body %}{% endblock %}
+        </div>
+
         <script src=\"https://code.jquery.com/jquery-3.5.1.slim.min.js\" integrity=\"sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj\" crossorigin=\"anonymous\"></script>
         <script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js\" integrity=\"sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN\" crossorigin=\"anonymous\"></script>
         <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js\" integrity=\"sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s\" crossorigin=\"anonymous\"></script>

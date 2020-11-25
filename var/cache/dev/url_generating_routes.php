@@ -15,6 +15,7 @@ return [
     '_profiler_router' => [['token'], ['_controller' => 'web_profiler.controller.router::panelAction'], [], [['text', '/router'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], []],
     '_profiler_exception' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::body'], [], [['text', '/exception'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], []],
     '_profiler_exception_css' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::stylesheet'], [], [['text', '/exception.css'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], []],
+    'admin_contents_create' => [[], ['_controller' => 'App\\Controller\\AdminContentsController::create'], [], [['text', '/admin/contents/create']], [], []],
     'admin_contents' => [[], ['_controller' => 'App\\Controller\\AdminContentsController::index'], [], [['text', '/admin/contents']], [], []],
     'admin_order' => [[], ['_controller' => 'App\\Controller\\AdminOrderController::index'], [], [['text', '/admin/order']], [], []],
     'admin_user' => [[], ['_controller' => 'App\\Controller\\AdminUserController::index'], [], [['text', '/admin/user']], [], []],
